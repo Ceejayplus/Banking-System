@@ -23,3 +23,10 @@ div ul li a:hover{
     transition: 3s;
     letter-spacing: 10px;
 }
+.navbar-brand:hover{
+    color: red !important;
+    font-weight: 800 !important;
+    transform: translateZ(20px);
+    transition: 3s;
+    letter-spacing: 5px;
+}
