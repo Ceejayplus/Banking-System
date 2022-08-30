@@ -1,4 +1,7 @@
 customerDetails = []
+if(localStorage.bankDetails){
+    customerDetails =JSON.parse(localStorage.getItem('bankDetails'))
+}
 
 let accountNum =Math.round(Math.random()*1000000)
 // let userPin = Math.round(Math.random()*10000)
@@ -17,7 +20,12 @@ const signUp = () => {
         firstname.value = ""
         lastname.value = ""
         useremail.value = ""
-        userphonenumber = ""
-        
+        userphonenumber.value = ""
+        userpassword.value = ""
+        window.location.href = ""
     }
+    else{
+        alert("PLEASE FILL THE REQUIRED SPACES")
+    }
+    localStorage.setItem('bankDetails', JSON.stringify(customerDetails))
 }
