@@ -1,0 +1,6 @@
+customerDetails = []
+const signUp = () => {
+    userDetails = {
+        
+    }
+}
