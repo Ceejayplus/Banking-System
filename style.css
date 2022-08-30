@@ -15,6 +15,7 @@
 div ul li a {
     font-weight: 500;
     color: black !important;
+    word-spacing: 10px;
 }
 div ul li a:hover{
     color: blue !important;
