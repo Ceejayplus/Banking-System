@@ -22,16 +22,16 @@ div ul li a {
 div ul li a:hover{
     color: blue !important;
     font-weight: 800;
-    transform: translateX(-10px);
+    transform: translateX(-5px);
     transition: 3s;
-    letter-spacing: 10px;
+    letter-spacing: 2px;
 }
 .navbar-brand:hover{
     color: red !important;
     font-weight: 800 !important;
-    transform: translateZ(20px);
+    transform: translateZ(10px);
     transition: 3s;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
 }
 .hov:hover{
     color: white !important;
@@ -57,6 +57,7 @@ div ul li a:hover{
 }
 .div57:hover{
     transform: scale(1.2);
+    transition: all 5s ease;
 }
 .div53{
     height: 50px;
