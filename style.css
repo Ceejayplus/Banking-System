@@ -31,3 +31,6 @@ div ul li a:hover{
     transition: 3s;
     letter-spacing: 5px;
 }
+.hov:hover{
+    color: blue !important;
+}
