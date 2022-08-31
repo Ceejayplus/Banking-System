@@ -39,11 +39,11 @@ a{
 
 @media only screen  and (max-width: 800px){
     #sidenav{
-        width: 300px;
+        width: 100px;
         height: 100vh;
         background-color: skyblue;
     }
-    ::placeholder{
+    /* ::placeholder{
         font-size: 30px;
         font-weight: 600;
     }
@@ -58,13 +58,11 @@ a{
         background-color: black;
         border-top-right-radius: 25px;
         border-bottom-left-radius: 25px;
-    }
+    }*/
     a{
-        font-family: 'Times New Roman', Times, serif;
-        font-style: italic;
-        font-size: large;
+        font-size: small;
     }
-    #display{
+    /* #display{
         width: 420px;
         height: 90px;
         color: black;
@@ -75,5 +73,5 @@ a{
         font-size: 21px;
         font-weight: 400;
         border-radius: 15px;
-    }
+    } */
 }
