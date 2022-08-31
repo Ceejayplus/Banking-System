@@ -9,7 +9,7 @@ const withdraw = () =>{
     } 
     else{
         balance = balance - inputAmount.value
-        display.innerText = `Successfully withrawn ${inputAmount.value} New blance = # ${balance}`
+        display.innerText = `Successfully withrawn $ ${inputAmount.value} New blance = $ ${balance}`
     }
 }
 
@@ -18,10 +18,10 @@ const deposit = () => {
         display.innerText ="Input an amount to be deposited"
     } else{
         balance = Number(balance) + Number(inputAmount.value)
-        display.innerText = `Succesfully deposited ${inputAmount.value} New balance = # ${balance}`
+        display.innerText = `Succesfully deposited $ ${inputAmount.value} New balance = $ ${balance}`
     }
 }
 
 const checkBalance = () =>{
-    display.innerText =`Current Balance = # ${balance}`
+    display.innerText =`Current Balance = $ ${balance}`
 }

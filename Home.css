@@ -31,7 +31,7 @@ a{
     background-color: whitesmoke;
     border: 3px solid black;
     margin-top: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 21px;
     font-weight: 400;
     border-radius: 15px;
@@ -39,7 +39,7 @@ a{
 
 @media only screen  and (max-width: 800px){
     #sidenav{
-        width: 100px;
+        width: 110px;
         height: 100vh;
         background-color: skyblue;
     }
@@ -62,10 +62,10 @@ a{
     a{
         font-size: small;
     }
-    /* #display{
+    #display{
         width: 420px;
         height: 90px;
-        color: black;
+    
         background-color: whitesmoke;
         border: 3px solid black;
         margin-top: 20px;
@@ -73,5 +73,5 @@ a{
         font-size: 21px;
         font-weight: 400;
         border-radius: 15px;
-    } */
+    } 
 }
