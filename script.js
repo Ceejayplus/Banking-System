@@ -3,7 +3,8 @@ if(localStorage.bankDetails){
     customerDetails =JSON.parse(localStorage.getItem('bankDetails'))
 }
 
-let accountNum =Math.round(Math.random()*1000000)
+let accountNum =Math.round(Math.random()*10000000000)
+let transacPin = Math.round(Math.random()*10000)
 // let userPin = Math.round(Math.random()*10000)
 const createAcc = () => {
     userDetails = {
@@ -12,7 +13,8 @@ const createAcc = () => {
         Email : useremail.value,
         phonenumber : userphonenumber.value,
         password : userpassword.value,
-        accountNumber : accountNum
+        accountNumber : accountNum,
+        transactionPin : transacPin
     }
 
     if((firstName = firstname.value) && (lastName = lastname.value) && (Eamil = useremail.value) && (phonenumber = userphonenumber.value) && (password = userpassword.value)){
