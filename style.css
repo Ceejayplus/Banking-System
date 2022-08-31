@@ -8,8 +8,7 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .navbar-brand{
-    font-family: 'Dancing Script', cursive !important;
-    font-family: 'Quicksand', sans-serif !important;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
     font-weight: 700 !important;
 }
 div ul li a {
