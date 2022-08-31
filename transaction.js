@@ -4,15 +4,17 @@ userDetails = [
         lastname:"Ola",
         accountNumber:"0165783993",
         pincode:"1226",
+        balance:1000
     },
     {
         firstname:"Enny",
         lastname:"Betty",
         accountNumber:"0189657324",
         pincode:"2020",
+        balance:1000
     }
 ]
-let balance = 1000
+
 const withdraw = () =>{
     if (inputAmount.value == ""){
         display.innerText = "Input a value"
