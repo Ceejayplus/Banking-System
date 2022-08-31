@@ -1,6 +1,7 @@
 
 body{
     overflow-x: hidden;
+    background-color: #FBFBFB;
 }
 .glass{
     background: rgba(255, 255, 255, 0.23);
