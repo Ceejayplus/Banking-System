@@ -31,5 +31,5 @@ const createAcc = () => {
 }
 
 const signUp = () =>{
-
+    window.location.href = "signup.html"
 }
