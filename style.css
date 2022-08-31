@@ -83,6 +83,32 @@ div ul li a:hover{
     opacity:0.5;
     margin-left: 10px;
 }
-.container{
+.div61{
     background-color: #F4F5FA;
+    border-radius: 10px;
+}
+.div70{
+    height: 40px !important;
+}
+.div62{
+    color: #D1D1DA;
+    font-size: 13px;
+}
+.div64{
+    position: relative;
+}
+.div68{
+    position: relative;
+    top: -20px;
+    right: 150px;
+    background-color: #F4F5FA;
+}
+.div74{
+    font-size: 15px;
+    text-align: justify;
+    color: #777D95;
+}
+.div73{
+    font-size: 14px;
+    font-weight: 800;
 }
