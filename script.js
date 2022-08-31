@@ -32,6 +32,6 @@ const createAcc = () => {
     localStorage.setItem('bankDetails', JSON.stringify(customerDetails))
 }
 
-const signUp = () =>{
+const signUp = () => {
     window.location.href = "signup.html"
 }
