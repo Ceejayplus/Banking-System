@@ -80,4 +80,5 @@ div ul li a:hover{
 ::placeholder{
     color: #888888;
     opacity:0.5;
+    margin-left: 10px;
 }
