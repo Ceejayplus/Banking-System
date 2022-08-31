@@ -40,5 +40,21 @@ div ul li a:hover{
     margin-left: 100px;
 }
 .div50{
+    font-size: 50px;
+    font-weight: 500;
     
+}
+.div57{
+    height: 400px;
+    width: 600px;
+}
+.div53{
+    height: 50px;
+}
+.div54{
+    /* margin-right: 200px !important; */
+    position: absolute;
+    z-index: 1;
+    left: 320px;
+    top: 433px;
 }
