@@ -5,7 +5,7 @@ if(localStorage.bankDetails){
 
 let accountNum =Math.round(Math.random()*1000000)
 // let userPin = Math.round(Math.random()*10000)
-const signUp = () => {
+const createAcc = () => {
     userDetails = {
         firstName : firstname.value,
         lastName : lastname.value,
@@ -28,4 +28,8 @@ const signUp = () => {
         alert("PLEASE FILL THE REQUIRED SPACES")
     }
     localStorage.setItem('bankDetails', JSON.stringify(customerDetails))
+}
+
+const signUp = () =>{
+
 }
