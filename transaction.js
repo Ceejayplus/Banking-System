@@ -40,10 +40,21 @@ const deposit = () => {
     }   
 }
 const transfer = () =>{
-    if (receiverAcc.value==""||receiverName==""||pin.value==""){
-        display.innerText = "There's still an unfilled fields"
+    if (inputAmount.value==""||receiverAcc.value==""||receiverName.value==""||pin.value==""){
+        display3.innerText = "There's still an unfilled fields"
     }
-    
+    else{
+        if (inputAmount.value > balance) {
+            display3.innerText = `Insufficient Balance`
+        }
+        else {
+            balance = balance - inputAmount.value
+
+            display3.innerHTML = `Dear Customer <br> You have Successfully transferred $ ${inputAmount.value} to ${receiverName.value}<br>New blance = $ ${balance}`
+            localStorage.setItem("userBalance", balance)
+        }
+    }
+  
 }
 
 const checkBalance = () =>{
