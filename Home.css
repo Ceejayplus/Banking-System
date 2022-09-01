@@ -23,7 +23,6 @@ button{
     background-image: url(media/2-7.png);
 }
 a{
-    color: white;
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
     font-size: large;
@@ -33,6 +32,30 @@ a{
     height: 120px;
     color: black;
     background-color: whitesmoke;
+    padding: 10px;
+    margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: 400;
+    border-radius: 3px;
+}
+#display2{
+    width: 1000px;
+    height: 120px;
+    color: black;
+    background-color: bisque;
+    padding: 10px;
+    margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: 400;
+    border-radius: 3px;
+}
+#display3{
+    width: 1000px;
+    height: 120px;
+    color: black;
+    background-color: aquamarine;
     padding: 10px;
     margin-top: 20px;
     font-family: 'Times New Roman', Times, serif;
