@@ -146,6 +146,22 @@ div ul li a:hover{
         height: 600px;
         overflow-y: hidden;
     }
+    .div57{
+
+    }
+    navbar{
+        text-align: center;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .div68{
+        position: relative;
+        top: -20px;
+        right: 150px;
+        background-color: #F4F5FA;
+        text-align: center;
+    }
 }
 #sidenav{
     width: 300px;
