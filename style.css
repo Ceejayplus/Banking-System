@@ -1,7 +1,10 @@
-
 body{
     overflow-x: hidden;
     background-color: #FBFBFB;
+}
+.body2{
+    background-image: url('/Img/banksignin.jpg');   
+    background-size: cover;
 }
 .glass{
     background: rgba(255, 255, 255, 0.23);
@@ -34,7 +37,7 @@ div ul li a:hover{
     transition: 3s;
     letter-spacing: 2px;
 }
-.hov:hover{
+.hovv:hover{
     color: white !important;
     background-color: #FF5253;
 }
