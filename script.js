@@ -38,3 +38,20 @@ const signUp = () => {
 const signIn = () => {
     window.location.href = "signin.html"
 }
+const logIn = ()  => {
+    var myUsername = username.value
+    var userPassword = passWord.value
+    var detailsChecker = false
+    for (let index = 0; index < customerDetails.length; index++) {
+        if(customerDetails[index].firstName == myUsername && customerDetails[index].password == userPassword){
+            detailsChecker = true
+            alert('GOOD 👍')
+        }
+    }
+    if(detailsChecker){
+        window.location.href = "dashboard.html"
+    }else{
+        alert("INVALID USERNAME OR PASSWORD")
+    }
+    
+}
