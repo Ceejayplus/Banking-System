@@ -153,10 +153,6 @@ a{
     height: 100vh;
     background-color: skyblue;
 }
-::placeholder{
-    /* font-size: 30px;
-    font-weight: 600; */
-}
 .div47{
     height: 70px;
 }
