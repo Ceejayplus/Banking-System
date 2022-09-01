@@ -6,6 +6,10 @@ body{
     background-image: url('/Img/banksignin.jpg');   
     background-size: cover;
 }
+.body3{
+    background-image: url('/Img/bank1.jpg');
+    background-size: cover;
+}
 .glass{
     background: rgba(255, 255, 255, 0.23);
     border-radius: 20px;
