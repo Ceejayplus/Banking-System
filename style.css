@@ -157,12 +157,12 @@ a{
     /* font-size: 30px;
     font-weight: 600; */
 }
-input{
-    /* height: 70px; */
+.div47{
+    height: 70px;
 }
 .div46{
-    /* width: 155px; */
-    /* height: 70px; */
+    width: 155px;
+    height: 70px;
     padding: 15px 20px 15px 20px;
     color: white;
     background-color: black;
