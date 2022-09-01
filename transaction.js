@@ -54,7 +54,10 @@ const transfer = () =>{
             localStorage.setItem("userBalance", balance)
         }
     }
-  
+    inputAmount.value == ""
+    receiverName.value == ""
+    receiverName.value == ""
+    pin.value == ""
 }
 
 const checkBalance = () =>{
