@@ -3,10 +3,13 @@ if(localStorage.bankDetails){
     customerDetails =JSON.parse(localStorage.getItem('bankDetails'))
 }
 
-let accountNum =Math.round(Math.random()*10000000000)
+let accountNum = "01" + Math.round(Math.random()*100000000)
 let transacPin = Math.round(Math.random()*10000)
-// let userPin = Math.round(Math.random()*10000)
 const createAcc = () => {
+    let regexForEmail = /^(([\w]+)([@])([\w]+)([.])([a-zA-Z]{1,5})([.][\w]{1,5})?)$/
+      let regexForName = /^[\w]{1,}$/
+      let regexForPhonenumber = /^[\d]{11}$/
+      let regexForPassword = /^[\d]{4,}$ /
     userDetails = {
         firstName : firstname.value,
         lastName : lastname.value,
@@ -17,18 +20,22 @@ const createAcc = () => {
         transactionPin : transacPin
     }
 
-    if((firstName = firstname.value) && (lastName = lastname.value) && (Eamil = useremail.value) && (phonenumber = userphonenumber.value) && (password = userpassword.value)){
-        customerDetails.push(userDetails)
-        firstname.value = ""
-        lastname.value = ""
-        useremail.value = ""
-        userphonenumber.value = ""
-        userpassword.value = ""
-        window.location.href = "signin.html"
+    if(regexForName.test(firstname.value) == false){
+        validateName.innerHTML = "type a correct name!"
     }
-    else{
-        alert("PLEASE FILL THE REQUIRED SPACES")
+    if(regexForName.test(lastname.value)==false){
+        validateName2.innerHTML ="lastname is incorrect!"
     }
+    if(regexForEmail.test(useremail.value)== false){
+        validateEmail.innerHTML = "input the right email!"
+    }
+    if(regexForPhonenumber.test(userphonenumber.value)==false){
+        validatePhonenumber.innerHTML = "phonenumber must be 11 digits"
+    }
+    if(regexForPassword.test(userpassword.value)==false){
+        validatePassword.innerHTML = "password must be up to 4 digits"
+    }
+    
     localStorage.setItem('bankDetails', JSON.stringify(customerDetails))
 }
 
