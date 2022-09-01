@@ -33,7 +33,6 @@ const createAcc = () => {
 }
 
 const signUp = () => {
-    var myUsername = 
     window.location.href = "signup.html"
 }
 const signIn = () => {
