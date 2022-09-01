@@ -40,6 +40,10 @@ const deposit = () => {
     }   
 }
 
+const checkBalance = () =>{
+    display.innerHTML =`Dear Customer <br> Current Balance = $ ${balance}`
+}
+
 // USING A BIG OBJECT, YOU CAN JUST ERASE THIS IF YOU WON'T NEED IT, I used it for my own practice and thought you might need the code
 
 // userDetails = [
@@ -108,7 +112,3 @@ const deposit = () => {
 //         }
 //     }   
 // }
-
-const checkBalance = () =>{
-    display.innerText =`Current Balance = $ ${balance}`
-}
