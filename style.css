@@ -122,3 +122,18 @@ div ul li a:hover{
 .div12{
     height: 50px;
 }
+.hvv:hover{
+    color: blue !important;
+}
+
+@media screen and (max-width: 550px) {
+    .div21{
+        color: white;
+    }
+    .body2{
+        background-image: url('/Img/banksignin.jpg');   
+        background-size: cover;
+        height: 600px;
+        overflow-y: hidden;
+    }
+}
