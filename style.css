@@ -130,12 +130,18 @@ div ul li a:hover{
     color: blue !important;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 820px) {
     .div21{
         color: white;
     }
     .body2{
         background-image: url('/Img/banksignin.jpg');   
+        background-size: cover;
+        height: 600px;
+        overflow-y: hidden;
+    }
+    .body3{
+        background-image: url('/Img/bank1.jpg');
         background-size: cover;
         height: 600px;
         overflow-y: hidden;
