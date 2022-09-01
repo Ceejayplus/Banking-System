@@ -1,7 +1,6 @@
 // localStorage.setItem("userBalance", 1000)
 let balance = localStorage.getItem("userBalance")
 
-display0.innerHTML = `Current Balance <br> --->This is hidden by default but you can tap the button below to see Current Balance`
 const tapCheck = () =>{
     if (button.innerText == "Public") {
         display0.innerHTML = `Dear User <br> Your Current Balance => $ ${balance}`;
@@ -28,6 +27,17 @@ const withdraw = () =>{
             localStorage.setItem("userBalance", balance)
         }
     }
+}
+
+const deposit = () => {
+    if (inputAmount.value == ""){
+        display2.innerText ="Input an amount to be deposited"
+    } 
+    else{
+        balance = Number(balance) + Number(inputAmount.value)
+        display2.innerHTML = `Succesfully deposited $ ${inputAmount.value} New balance = $ ${balance}`
+        localStorage.setItem("userBalance", balance)
+    }   
 }
 
 // USING A BIG OBJECT, YOU CAN JUST ERASE THIS IF YOU WON'T NEED IT, I used it for my own practice and thought you might need the code
@@ -79,25 +89,25 @@ const withdraw = () =>{
 //     }
 // }
 
-const deposit = () => {
-    if (inputAmount.value == ""){
-        display2.innerText ="Input an amount to be deposited"
-    } else{
-        var pinValue = pin.value
-        var passcode = false
-        for (let index = 0; index < userDetails.length; index++) {
-            if (pinValue == userDetails[index].pincode){
-                passcode = true
-            }
-            balance = userDetails[index].pincode
-            username = userDetails[index].firstname
-        }
-        if (passcode){
-            balance = Number(balance) + Number(inputAmount.value)
-            display2.innerText = `Succesfully deposited $ ${inputAmount.value} New balance = $ ${balance}`
-        }
-    }   
-}
+// const deposit = () => {
+//     if (inputAmount.value == ""){
+//         display2.innerText ="Input an amount to be deposited"
+//     } else{
+//         var pinValue = pin.value
+//         var passcode = false
+//         for (let index = 0; index < userDetails.length; index++) {
+//             if (pinValue == userDetails[index].pincode){
+//                 passcode = true
+//             }
+//             balance = userDetails[index].pincode
+//             username = userDetails[index].firstname
+//         }
+//         if (passcode){
+//             balance = Number(balance) + Number(inputAmount.value)
+//             display2.innerText = `Succesfully deposited $ ${inputAmount.value} New balance = $ ${balance}`
+//         }
+//     }   
+// }
 
 const checkBalance = () =>{
     display.innerText =`Current Balance = $ ${balance}`
