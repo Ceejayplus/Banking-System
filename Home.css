@@ -1,7 +1,7 @@
 #sidenav{
     width: 300px;
     height: 100vh;
-    background-color: skyblue;
+    background-color: black;
 }
 ::placeholder{
     font-size: 30px;
@@ -19,10 +19,11 @@ button{
     border-top-right-radius: 25px;
     border-bottom-left-radius: 25px;
 }
-#disp{
-
+#secondDiv{
+    background-image: url(media/2-7.png);
 }
 a{
+    color: white;
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
     font-size: large;
@@ -49,9 +50,9 @@ a{
         font-size: 20px;
         font-weight: 400;
     }
-    /*input{
-        height: 70px;
-    }*/
+    input{
+        height: 50px;
+    }
     button{
         width: 110px;
         height: 55px;

@@ -52,9 +52,20 @@ const deposit = () => {
     if (inputAmount.value == ""){
         display.innerText ="Input an amount to be deposited"
     } else{
-        balance = Number(balance) + Number(inputAmount.value)
-        display.innerText = `Succesfully deposited $ ${inputAmount.value} New balance = $ ${balance}`
-    }
+        var pinValue = pin.value
+        var passcode = false
+        for (let index = 0; index < userDetails.length; index++) {
+            if (pinValue == userDetails[index].pincode){
+                passcode = true
+            }
+            balance = userDetails[index].pincode
+            username = userDetails[index].firstname
+        }
+        if (passcode){
+            balance = Number(balance) + Number(inputAmount.value)
+            display.innerText = `Succesfully deposited $ ${inputAmount.value} New balance = $ ${balance}`
+        }
+    }   
 }
 
 const checkBalance = () =>{
