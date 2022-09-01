@@ -24,7 +24,7 @@ const createAcc = () => {
         useremail.value = ""
         userphonenumber.value = ""
         userpassword.value = ""
-        window.location.href = ""
+        window.location.href = "signin.html"
     }
     else{
         alert("PLEASE FILL THE REQUIRED SPACES")
@@ -39,10 +39,11 @@ const signIn = () => {
     window.location.href = "signin.html"
 }
 const logIn = ()  => {
-    var myUsername = username.value
+    var myUsername = Username.value
     var userPassword = passWord.value
+    var customerDetails = JSON.parse(localStorage.getItem('bankDetails'))
     var detailsChecker = false
-    for (let index = 0; index < customerDetails.length; index++) {
+    for (let index = 0; index < customerDetails.length; index++){
         if(customerDetails[index].firstName == myUsername && customerDetails[index].password == userPassword){
             detailsChecker = true
             alert('GOOD 👍')
