@@ -1,30 +1,50 @@
 userDetails = [
     {
+        pincode:"1226",
         firstname:"Ade",
         lastname:"Ola",
         accountNumber:"0165783993",
-        pincode:"1226",
-        balance:1000
+        userBalance:1000
     },
     {
+        pincode:"2020",
         firstname:"Enny",
         lastname:"Betty",
         accountNumber:"0189657324",
-        pincode:"2020",
-        balance:1000
+        userBalance:1000
     }
 ]
 
+
 const withdraw = () =>{
-    if (inputAmount.value == ""){
-        display.innerText = "Input a value"
+    
+    
+    if (inputAmount.value==""||pin.value==""){
+        display.innerText = "fill all unfilled fields"
     }
-    else if (inputAmount.value > balance){
-        display.innerText = `Insufficient Balance`
-    } 
     else{
-        balance = balance - inputAmount.value
-        display.innerText = `Successfully withrawn $ ${inputAmount.value} New blance = $ ${balance}`
+        var pinValue = pin.value
+        var passcode = false
+        for (let index = 0; index < userDetails.length; index++) {
+            if (pinValue == userDetails[index].pincode){
+                passcode = true
+            }
+            balance = userDetails[index].pincode
+            username = userDetails[index].firstname
+        }
+        if (passcode){
+            if (inputAmount.value > balance){
+                display.innerText = `Insufficient Balance`
+            } 
+            else{
+                balance = balance - inputAmount.value
+               
+                display.innerHTML = `Dear ${username} <br> Successfully withrawn $ ${inputAmount.value} New blance = $ ${balance}`
+            }
+        }
+        else{
+            display.innerText = "invalid pincode"
+        }
     }
 }
 

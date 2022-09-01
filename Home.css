@@ -19,45 +19,46 @@ button{
     border-top-right-radius: 25px;
     border-bottom-left-radius: 25px;
 }
+#disp{
+
+}
 a{
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
     font-size: large;
 }
 #display{
-    width: 500px;
+    width: 1000px;
     height: 120px;
     color: black;
     background-color: whitesmoke;
-    border: 3px solid black;
+    padding: 10px;
     margin-top: 20px;
     font-family: 'Times New Roman', Times, serif;
     font-size: 30px;
     font-weight: 400;
-    border-radius: 15px;
+    border-radius: 3px;
 }
 
 @media only screen  and (max-width: 800px){
     #sidenav{
-        width: 90px;
+        width: 95px;
         height: 100vh;
     }
-    /* ::placeholder{
-        font-size: 30px;
-        font-weight: 600;
+    ::placeholder{
+        font-size: 20px;
+        font-weight: 400;
     }
-    input{
+    /*input{
         height: 70px;
-    }
-    button{
-        width: 155px;
-        height: 70px;
-        padding: 15px 20px 15px 20px;
-        color: white;
-        background-color: black;
-        border-top-right-radius: 25px;
-        border-bottom-left-radius: 25px;
     }*/
+    button{
+        width: 110px;
+        height: 55px;
+        padding: 10px 15px 10px 15px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
     a{
         font-size: 12px;
     }
