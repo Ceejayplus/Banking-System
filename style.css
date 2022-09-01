@@ -154,22 +154,22 @@ a{
     background-color: skyblue;
 }
 ::placeholder{
-    font-size: 30px;
-    font-weight: 600;
+    /* font-size: 30px;
+    font-weight: 600; */
 }
 input{
-    height: 70px;
+    /* height: 70px; */
 }
 button{
-    width: 155px;
-    height: 70px;
+    /* width: 155px; */
+    /* height: 70px; */
     padding: 15px 20px 15px 20px;
     color: white;
     background-color: black;
     border-top-right-radius: 25px;
     border-bottom-left-radius: 25px;
 }
-a{
+.div28{
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
     font-size: large;

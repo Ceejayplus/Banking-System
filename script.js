@@ -50,9 +50,9 @@ const logIn = ()  => {
         }
     }
     if(detailsChecker){
-        window.location.href = "dashboard.html"
+        window.location.href = `dashboard.html`
     }else{
-        alert("INVALID USERNAME OR PASSWORD")
+        alert(`INVALID USERNAME OR PASSWORD`)
     }
     
 }
@@ -61,7 +61,7 @@ const logIn = ()  => {
 let balance = 1000
 const withdraw = () =>{
     if (inputAmount.value == ""){
-        display.innerText = "Input a value"
+        display.innerText = `Input a value`
     }
     else if (inputAmount.value > balance){
         display.innerText = `Insufficient Balance`
@@ -74,7 +74,7 @@ const withdraw = () =>{
 
 const deposit = () => {
     if (inputAmount.value == ""){
-        display.innerText ="Input an amount to be deposited"
+        display.innerText =`Input an amount to be deposited`
     } else{
         balance = Number(balance) + Number(inputAmount.value)
         display.innerText = `Succesfully deposited ${inputAmount.value} New balance = # ${balance}`
