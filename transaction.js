@@ -39,6 +39,12 @@ const deposit = () => {
         localStorage.setItem("userBalance", balance)
     }   
 }
+const transfer = () =>{
+    if (receiverAcc.value==""||receiverName==""||pin.value==""){
+        display.innerText = "There's still an unfilled fields"
+    }
+    
+}
 
 const checkBalance = () =>{
     display.innerHTML =`Dear Customer <br> Current Balance = $ ${balance}`
