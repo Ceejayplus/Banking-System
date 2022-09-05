@@ -1,4 +1,4 @@
-// localStorage.setItem("userBalance", 1000)
+localStorage.setItem("userBalance", 1000)
 let balance = localStorage.getItem("userBalance")
 
 const tapCheck = () =>{
