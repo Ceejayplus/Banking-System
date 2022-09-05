@@ -39,18 +39,6 @@ a{
     font-weight: 400;
     border-radius: 3px;
 }
-#display{
-    width: 1000px;
-    height: 145px;
-    color: black;
-    background-color: whitesmoke;
-    padding: 10px;
-    margin-top: 20px;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 30px;
-    font-weight: 400;
-    border-radius: 3px;
-}
 #display2{
     width: 1000px;
     height: 145px;
