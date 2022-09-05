@@ -15,28 +15,32 @@
     </head>
     <body>
         
-        <nav class="navbar navbar-expand-lg sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top">
             <div class="container-fluid">
               <a class="navbar-brand ms-3 fs-2 text-dark fst-italic" href="#">New Century</a>
-              <button class="navbar-toggler" t2pe="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"><i class="fa-solid fa-bars w-100 mt-1"></i></span>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <!-- <div class="collapse-header">
+                <button type="button" class="btn-close" data-ds-dismiss="collapse" aria-label="Close" >
+              </div> -->
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto mb-2 me-auto mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                    <a class="nav-link fw-bold" aria-current="page" href="#">HOME</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="https://en.wikipedia.org/wiki/Kuda_Bank">ABOUT</a>
+                    <a class="nav-link fw-bold" href="https://en.wikipedia.org/wiki/Kuda_Bank">ABOUT</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="https://blog.kuda.com/">BLOG</a>
+                    <a class="nav-link fw-bold" href="https://blog.kuda.com/">BLOG</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="https://kuda.com/contact/">CONTACT</a>
+                    <a class="nav-link fw-bold" href="https://kuda.com/contact/">CONTACT</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="www.indeed.com">SERVICE</a>
+                    <a class="nav-link fw-bold" href="www.indeed.com">SERVICE</a>
                   </li>
                 </ul>
                 <button onclick="signIn()" class=" btn btn-sm btn-light border rounded ps-3 pe-3 me-4 fw-bold hovv">SIGN IN</button>
@@ -91,5 +95,9 @@
 
         
         <script src="script.js"></script>
+        <script src="/bootstrap-5.1.3-dist/js/bootstrap.js"></script>
+        <script src="/bootstrap-5.1.3-dist/js/bootstrap.bundle.js"></script>
+        <!-- <link rel="stylesheet" href="/bootstrap-5.1.3-dist/js/bootstrap.js"> -->
+
     </body>
 </html>
