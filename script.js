@@ -9,7 +9,7 @@ const createAcc = () => {
     let regexForEmail = /^(([\w]+)([@])([\w]+)([.])([a-zA-Z]{1,5})([.][\w]{1,5})?)$/
       let regexForName = /^[\w]{1,}$/
       let regexForPhonenumber = /^[\d]{11}$/
-      let regexForPassword = /^[\d]{4,}$ /
+      let regexForPassword = /^[\d]{4,}$/
     userDetails = {
         firstName : firstname.value,
         lastName : lastname.value,
@@ -35,6 +35,7 @@ const createAcc = () => {
     if(regexForPassword.test(userpassword.value)==false){
         validatePassword.innerHTML = "password must be up to 4 digits"
     }
+    window.location.href = "signin.html"
     
     localStorage.setItem('bankDetails', JSON.stringify(customerDetails))
 }
