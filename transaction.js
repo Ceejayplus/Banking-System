@@ -1,57 +1,50 @@
-localStorage.setItem("userBalance", 1000)
-let balance = localStorage.getItem("userBalance")
+let  currentUserI = JSON.parse(localStorage.getItem('currentUserIndex'))  
+let  currentUser = currentUserI[0];
+let currentUserBalance = currentUser.balance
 
-const tapCheck = () =>{
-    if (button.innerText == "Public") {
-        display0.innerHTML = `Dear User <br> Your Current Balance => $ ${balance}`;
-        button.innerText = `Hide`;
-    } else {
-        
-        display0.innerHTML = `Current Balance <br> --->This is hidden by default but you can tap the button below to see Current Balance`
-        button.innerText = "Public";
-    } 
-}
 
-const withdraw = () =>{
-    if (inputAmount.value==""||pin.value==""){
-        display.innerText = "There's still an unfilled fields"
+const withdraw =()=>{
+    if (inputAmount.value==""||transPin.value==""){
+        thirdDisp.innerHTML = `There's still an unfilled fields`
+    }
+    else if (transPin.value != currentUser.transactionPin){
+        thirdDisp.innerHTML= `Invalid pincode`
+    }
+    else if (inputAmount.value > currentUserBalance) {
+        thirdDisp.innerHTML = `Insufficient Balance`
     }
     else{
-        if (inputAmount.value > balance) {
-            display.innerText = `Insufficient Balance`
-        }
-        else {
-            balance = balance - inputAmount.value
+        currentUserBalance = currentUserBalance - inputAmount.value
 
-            display.innerHTML = `Dear User <br> Successfully withrawn $ ${inputAmount.value} New blance = $ ${balance}`
-            localStorage.setItem("userBalance", balance)
-        }
+        thirdDisp.innerHTML = `Dear ${currentUser.firstName} <br> Successfully withrawn $ ${inputAmount.value} New blance = $ ${currentUserBalance}`
+        currentUser.balance = currentUserBalance
+        localStorage.setItem('currentUserIndex', JSON.stringify(currentUser))
+        // localStorage.setItem('bankDetails', JSON.stringify(customerDetails))
     }
 }
 
-const deposit = () => {
+const deposit =()=> {
     if (inputAmount.value == ""){
-        display2.innerText ="Input an amount to be deposited"
+        secondDisp.innerText ="Input an amount to be deposited"
     } 
     else{
-        balance = Number(balance) + Number(inputAmount.value)
-        display2.innerHTML = `Succesfully deposited $ ${inputAmount.value} New balance = $ ${balance}`
-        localStorage.setItem("userBalance", balance)
+        balance = Number(currentUserBalance) + Number(inputAmount.value)
+        secondDisp.innerHTML = `Succesfully deposited $ ${inputAmount.value} New balance = $ ${currentUserBalance}`
+        localStorage.setItem("userBalance", currentUserBalance)
     }   
 }
 const transfer = () =>{
     if (inputAmount.value==""||receiverAcc.value==""||receiverName.value==""||pin.value==""){
-        display3.innerText = "There's still an unfilled fields"
+        thirdDisp.innerText = "There's still an unfilled fields"
     }
     else{
         if (inputAmount.value > balance) {
-            display3.innerText = `Insufficient Balance`
+            thirdDisp.innerText = `Insufficient Balance`
         }
         else {
-            balance = balance - inputAmount.value
+            currentUserBalance = currentUserBalance - inputAmount.value
 
-            display3.innerHTML = `Dear Customer <br> You have Successfully transferred $ ${inputAmount.value} to ${receiverName.value}<br>New blance = $ ${balance}`
-            localStorage.setItem("userBalance", balance)
+            thirdDisp.innerHTML = `Dear Customer <br> You have Successfully transferred $ ${inputAmount.value} to ${receiverName.value}<br>New blance = $ ${currentUserBalance}`
         }
     }
     inputAmount.value == ""
@@ -61,74 +54,5 @@ const transfer = () =>{
 }
 
 const checkBalance = () =>{
-    display.innerHTML =`Dear Customer <br> Current Balance = $ ${balance}`
+    display.innerHTML =`Dear Customer <br> Current Balance = $ ${currentUserBalance}`
 }
-
-// USING A BIG OBJECT, YOU CAN JUST ERASE THIS IF YOU WON'T NEED IT, I used it for my own practice and thought you might need the code
-
-// userDetails = [
-//     {
-//         pincode:"1226",
-//         firstname:"Ade",
-//         lastname:"Ola",
-//         accountNumber:"0165783993",
-//         userBalance:1000
-//     },
-//     {
-//         pincode:"2020",
-//         firstname:"Enny",
-//         lastname:"Betty",
-//         accountNumber:"0189657324",
-//         userBalance:1000
-//     }
-// ]
-
-// const withdraw = () =>{
-//     if (inputAmount.value==""||pin.value==""){
-//         display.innerText = "There's still an unfilled fields"
-//     }
-//     else{
-//         var pinValue = pin.value
-//         var passcode = false
-//         for (let index = 0; index < userDetails.length; index++) {
-//             if (pinValue == userDetails[index].pincode){
-//                 passcode = true
-//             }
-//             balance = userDetails[index].pincode
-//             username = userDetails[index].firstname
-//         }
-//         if (passcode){
-//             if (inputAmount.value > balance){
-//                 display.innerText = `Insufficient Balance`
-//             } 
-//             else{
-//                 balance = balance - inputAmount.value
-               
-//                 display.innerHTML = `Dear ${username} <br> Successfully withrawn $ ${inputAmount.value} New blance = $ ${balance}`
-//             }
-//         }
-//         else{
-//             display.innerText = "invalid pincode"
-//         }
-//     }
-// }
-
-// const deposit = () => {
-//     if (inputAmount.value == ""){
-//         display2.innerText ="Input an amount to be deposited"
-//     } else{
-//         var pinValue = pin.value
-//         var passcode = false
-//         for (let index = 0; index < userDetails.length; index++) {
-//             if (pinValue == userDetails[index].pincode){
-//                 passcode = true
-//             }
-//             balance = userDetails[index].pincode
-//             username = userDetails[index].firstname
-//         }
-//         if (passcode){
-//             balance = Number(balance) + Number(inputAmount.value)
-//             display2.innerText = `Succesfully deposited $ ${inputAmount.value} New balance = $ ${balance}`
-//         }
-//     }   
-// }

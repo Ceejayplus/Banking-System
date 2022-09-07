@@ -9,15 +9,16 @@ const createAcc = () => {
     let regexForEmail = /^(([\w]+)([@])([\w]+)([.])([a-zA-Z]{1,5})([.][\w]{1,5})?)$/
       let regexForName = /^[\w]{1,}$/
       let regexForPhonenumber = /^[\d]{11}$/
-      let regexForPassword = /^[\d]{4,}$ /
+      let regexForPassword = /^(([\w]+){4,})$/
     userDetails = {
         firstName : firstname.value,
         lastName : lastname.value,
         Email : useremail.value,
         phonenumber : userphonenumber.value,
         password : userpassword.value,
-        accountNumber : accountNum,
-        transactionPin : transacPin
+        accountNumber : accountNum, 
+        transactionPin : transacPin,
+        balance : 1000
     }
 
     if(regexForName.test(firstname.value) == false){
@@ -35,8 +36,9 @@ const createAcc = () => {
     if(regexForPassword.test(userpassword.value)==false){
         validatePassword.innerHTML = "password must be up to 4 digits"
     }
-    
+    customerDetails.push(userDetails)
     localStorage.setItem('bankDetails', JSON.stringify(customerDetails))
+    window.location.href = "signin.html"
 }
 
 const signUp = () => {
@@ -46,48 +48,44 @@ const signIn = () => {
     window.location.href = "signin.html"
 }
 const logIn = ()  => {
-    var myUsername = Username.value
+    var myEmail = email.value
     var userPassword = passWord.value
     var customerDetails = JSON.parse(localStorage.getItem('bankDetails'))
     var detailsChecker = false
+
+    let filteredArray = customerDetails.filter((item,index)=>(item.Email==email.value))
+
     for (let index = 0; index < customerDetails.length; index++){
-        if(customerDetails[index].firstName == myUsername && customerDetails[index].password == userPassword){
+        if(customerDetails[index].Email == myEmail && customerDetails[index].password == userPassword){
             detailsChecker = true
             alert('GOOD 👍')
+            console.log(customerDetails)
         }
     }
     if(detailsChecker){
+        localStorage.setItem('currentUserIndex', JSON.stringify(filteredArray))
         window.location.href = `dashboard.html`
     }else{
-        alert(`INVALID USERNAME OR PASSWORD`)
+        alert(`INVALID EMAIL OR PASSWORD`)
     }
     
 }
 
 
-let balance = 1000
-const withdraw = () =>{
-    if (inputAmount.value == ""){
-        display.innerText = `Input a value`
-    }
-    else if (inputAmount.value > balance){
-        display.innerText = `Insufficient Balance`
+let  currentUserI = JSON.parse(localStorage.getItem('currentUserIndex'))  
+let  currentUser = currentUserI[0];
+let currentUserBalance = currentUser.balance
+
+
+firstDisp.innerHTML = `Dear ${currentUser.firstName} <br> Your Account No. is ${currentUser.accountNumber} <br> Your Pincode is ${currentUser.transactionPin}`
+
+const tapCheck =()=>{
+    if (button.innerText == "Public") {
+        secondDisp.innerHTML = `Dear User <br> Your Current Balance => $ ${currentUserBalance}`;
+        button.innerText = `Hide`;
+    } else {
+        
+        secondDisp.innerHTML = `Current Balance is hidden by default, Tap the button below to see your Balance`
+        button.innerText = "Public";
     } 
-    else{
-        balance = balance - inputAmount.value
-        display.innerText = `Successfully withrawn ${inputAmount.value} New blance = # ${balance}`
-    }
-}
-
-const deposit = () => {
-    if (inputAmount.value == ""){
-        display.innerText =`Input an amount to be deposited`
-    } else{
-        balance = Number(balance) + Number(inputAmount.value)
-        display.innerText = `Succesfully deposited ${inputAmount.value} New balance = # ${balance}`
-    }
-}
-
-const checkBalance = () =>{
-    display.innerText =`Current Balance = # ${balance}`
 }
