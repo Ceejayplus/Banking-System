@@ -53,11 +53,12 @@ const logIn = ()  => {
     var customerDetails = JSON.parse(localStorage.getItem('bankDetails'))
     var detailsChecker = false
 
-    let filteredArray = customerDetails.filter((item,index)=>(item.Email==email.value))
+    let filteredArray;
 
     for (let index = 0; index < customerDetails.length; index++){
         if(customerDetails[index].Email == myEmail && customerDetails[index].password == userPassword){
             detailsChecker = true
+            filteredArray = customerDetails[index]
             alert('GOOD 👍')
             console.log(customerDetails)
         }
