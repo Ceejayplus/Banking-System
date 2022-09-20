@@ -33,10 +33,12 @@ const withdraw =()=>{
 }
 
 const deposit =()=> {
-    if (inputAmount.value == ""){
-        secondDisp.innerText ="Input an amount to be deposited"
+    if (inputAmount.value==""||transPin.value==""){
+        secondDisp.innerText = `There's still an unfilled fields`
     } 
-    else{
+    else if (transPin.value != currentUser.transactionPin){
+        thirdDisp.innerHTML= `Invalid pincode`
+    }else{
         currentUserBalance = currentUserBalance + Number(inputAmount.value)
         currentUser.balance = currentUserBalance
         localStorage.setItem('currentUserIndex', JSON.stringify(currentUser))
@@ -59,11 +61,13 @@ const transfer = () =>{
     if (inputAmount.value==""||receiverAcc.value==""||receiverName.value==""||pin.value==""){
         thirdDisp.innerText = "There's still an unfilled fields"
     }
-    else if (inputAmount.value > balance) {
+    else if (inputAmount.value > currentUserBalance) {
         thirdDisp.innerText = `Insufficient Balance`
     }else {
         currentUserBalance = currentUserBalance - Number(inputAmount.value)
-        
+        localStorage.setItem('currentUserIndex', JSON.stringify(currentUser))
+        let allUser = JSON.parse(localStorage.bankDetails)
+
         let index;
         for(a in allUser){
             if(allUser[a].Email == currentUser.Email){
@@ -82,5 +86,5 @@ const transfer = () =>{
 }
 
 const checkBalance = () =>{
-    display.innerHTML =`Dear Customer <br> Current Balance = $ ${currentUserBalance}`
+    secondDisp.innerHTML =`Dear Customer <br> Current Balance = $ ${currentUserBalance}`
 }
