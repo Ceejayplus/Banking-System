@@ -73,20 +73,19 @@ const logIn = ()  => {
 }
 
 
-let  currentUserI = JSON.parse(localStorage.getItem('currentUserIndex'))  
-let  currentUser = currentUserI[0];
+let  currentUser = JSON.parse(localStorage.getItem('currentUserIndex'))  
 let currentUserBalance = currentUser.balance
 
 
-firstDisp.innerHTML = `Dear ${currentUser.firstName} <br> Your Account No. is ${currentUser.accountNumber} <br> Your Pincode is ${currentUser.transactionPin}`
+firstDisp.innerHTML = `Welcome ${currentUser.firstName} <br> Your Account No. is ${currentUser.accountNumber} <br> Your Current Balance is ${currentUserBalance}`
 
 const tapCheck =()=>{
     if (button.innerText == "Public") {
-        secondDisp.innerHTML = `Dear User <br> Your Current Balance => $ ${currentUserBalance}`;
+        secondDisp.innerHTML = `Dear User <br> Your Pincode => $ ${ currentUser.transactionPin}`;
         button.innerText = `Hide`;
     } else {
         
-        secondDisp.innerHTML = `Current Balance is hidden by default, Tap the button below to see your Balance`
+        secondDisp.innerHTML = `Pincode is hidden by default, Tap the button below to see your Pin`
         button.innerText = "Public";
     } 
 }
