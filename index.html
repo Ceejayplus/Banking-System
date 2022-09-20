@@ -16,35 +16,41 @@
     </head>
     <body>
         
-        <nav class="navbar navbar-expand-lg sticky-top">
-            <div class="container-fluid">
-              <a class="navbar-brand ms-3 fs-2 text-dark fst-italic" href="#">New Century</a>
-              <button class="navbar-toggler" t2pe="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"><i class="fa-solid fa-bars w-100 mt-1"></i></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 me-auto mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">HOME</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://en.wikipedia.org/wiki/Kuda_Bank">ABOUT</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://blog.kuda.com/">BLOG</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://kuda.com/contact/">CONTACT</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="www.indeed.com">SERVICE</a>
-                  </li>
-                </ul>
-                <button onclick="signIn()" class=" btn btn-sm btn-light border rounded ps-3 pe-3 me-4 fw-bold hovv">SIGN IN</button>
-                <button onclick="signUp()" class=" btn btn-sm text-white me-5 div43 rounded ps-3 pe-3 fw-bold">Create an Account</button>
-              </div>
+      <nav class="navbar navbar-light sticky-top">
+        <div class="container-fluid navbar-expand-lg">
+          <a class="navbar-brand ms-3 fs-2 text-dark fst-italic" href="#">New Century</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">New Century</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-        </nav>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav ms-auto mb-2 me-auto mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active fw-bold" aria-current="page" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fw-bold" href="#">ABOUT</a>
+                </li>
+          <li class="nav-item">
+                  <a class="nav-link fw-bold" href="#">BLOG</a>
+                </li>
+          <li class="nav-item">
+                  <a class="nav-link fw-bold" href="#">CONTACT</a>
+                </li>
+          <li class="nav-item">
+                  <a class="nav-link fw-bold" href="#">SERVICE</a>
+                </li>
+              </ul>
+              <button onclick="signIn()" class=" btn btn-sm btn-light border rounded ps-3 pe-3 me-4 fw-bold hovv">SIGN IN</button>
+                      <button onclick="signUp()" class=" btn btn-sm text-white me-5 div43 rounded ps-3 pe-3 fw-bold">Create an Account</button>
+            </div>
+          </div>
+        </div>
+      </nav>
 
         <div class="row mt-3 fill">
           <div class="col">
@@ -68,7 +74,7 @@
           </div>
           <div class="card div61 div68 mb-3 rounded border-0" style="width: 20rem; height: 7rem;">
             <div class="row g-0">
-                <img src="/Img/box1.PNG d-none d-md-block" class="col div70 mt-2" alt="...">
+                <img src="/Img/box1.PNG" class="d-none d-md-block col div70 mt-2" alt="...">
               <div class="col-sm- 4 col-md-10">
                 <div class="card-body">
                   <h5 class="card-title mb- div73">Asset to your business.</a></h5>
@@ -79,7 +85,7 @@
           </div>
           <div class="card div61 div68 mb-3 rounded border-0" style="width: 20rem; height: 7rem;">
             <div class="row g-0">
-                <img src="/Img/box2.PNG d-none d-md-block" class="col div70 mt-2" alt="...">
+                <img src="/Img/box2.PNG" class="d-none d-md-block col div70 mt-2" alt="...">
               <div class="col-sm- 4 col-md-10">
                 <div class="card-body">
                   <h5 class="card-title mb- div73">Banking worth talking about.</a></h5>
@@ -92,5 +98,9 @@
 
         
         <script src="script.js"></script>
+        <script src="/bootstrap-5.1.3-dist/js/bootstrap.js"></script>
+        <script src="/bootstrap-5.1.3-dist/js/bootstrap.bundle.js"></script>
+        <!-- <link rel="stylesheet" href="/bootstrap-5.1.3-dist/js/bootstrap.js"> -->
+
     </body>
 </html>
