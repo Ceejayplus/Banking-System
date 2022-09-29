@@ -163,23 +163,18 @@ div ul li a:hover{
         text-align: center;
     }
     .div68{
-        /* position: relative; */
-        /* top: -20px; */
-        /* right: 10px !important; */
         background-color: #F4F5FA;
     }
     .div54{
         position: relative;
         z-index: 1;
-        /* right: 110px; */
-        /* top: -20px; */
         background-color: #FF5253;
     }
 }
 #sidenav{
     width: 300px;
     height: 100vh;
-    background-color: skyblue;
+    background-color: black;
 }
 a{
     font-family: 'Times New Roman', Times, serif;
@@ -190,7 +185,7 @@ a{
 #sidenav{
     width: 300px;
     height: 100vh;
-    background-color: skyblue;
+    background-color: black;
 }
 .div47{
     height: 70px;
