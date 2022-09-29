@@ -84,11 +84,12 @@ const withdraw = () =>{
 
 const deposit = () => {
     if (inputAmount.value == ""){
-        display.innerText =`Input an amount to be deposited`
+        displayBoard.innerHTML =`<div class="fw-bold text-center m-auto text-danger alert alert-danger">Plesase enter an amount</div>`
     } else{
         balance = Number(balance) + Number(inputAmount.value)
-        display.innerText = `Succesfully deposited ${inputAmount.value} New balance = # ${balance}`
+        displayBoard.innerHTML = `<div class="fw-bold m-auto text-center text-success alert alert-success">Succesfully deposited ${inputAmount.value} New balance = #${balance}</div>`
     }
+    // alert(inputAmount.value)
 }
 
 const checkBalance = () =>{
